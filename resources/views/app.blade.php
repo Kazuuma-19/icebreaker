@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Icebreaker</title>
-        @vite('resources/js/app.js')
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @inertiaHead
     </head>
     <body>
