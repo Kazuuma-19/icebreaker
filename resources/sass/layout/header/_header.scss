@@ -1,0 +1,16 @@
+/****************************************:
+
+header
+
+*****************************************:*/
+
+@use "../../foundation" as f;
+
+h1 {
+    color: f.$accentColor;
+    font-weight: bold;
+
+    // @include g.mq(xl) {
+    //     color: g.$accentColor;
+    // }
+}
