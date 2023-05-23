@@ -3,9 +3,10 @@
 base
 
 *****************************************:*/
+@use "../foundation" as f;
 
 body {
-    // font-family: g.$baseFontFamily;
+    font-family: f.$baseFontFamily;
     line-height: 1.75;
     font-size: 16px;
 }
