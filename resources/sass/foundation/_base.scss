@@ -5,6 +5,9 @@ base
 *****************************************:*/
 @use "../foundation" as f;
 
+// import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 body {
     font-family: f.$baseFontFamily;
     line-height: 1.75;

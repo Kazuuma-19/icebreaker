@@ -3,3 +3,8 @@
 footer
 
 *****************************************:*/
+@use "../../foundation/" as f;
+
+.l-footer {
+    border-top: 12px double f.$mainColor;
+}

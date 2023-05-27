@@ -1,0 +1,10 @@
+@use "../../foundation/" as f;
+
+.c-btn {
+    color: f.$baseWhiteColor;
+    background-color: f.$mainColor;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px gray;
+
+    padding: 20px 24px;
+}

@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import autoprefixer from 'autoprefixer';
 import viteImagemin from 'vite-plugin-imagemin';
+import path from 'path';
 
 export default defineConfig({
     plugins: [
@@ -51,6 +52,11 @@ export default defineConfig({
             plugins: [
                 autoprefixer({}) // autoprefixer
             ],
+        }
+    },
+    resolve: {
+        alias: {
+            '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap')
         }
     }
 });
