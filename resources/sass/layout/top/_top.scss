@@ -1,0 +1,86 @@
+@use "../../foundation/" as f;
+
+.l-topic-title {
+    font-size: 64px;
+    color: f.$accentColor;
+    border-top: 2px solid f.$accentColor;
+    border-bottom: 2px solid f.$accentColor;
+
+    display: inline-block;
+}
+
+// box
+.l-topic-box {
+    height: 240px;
+
+    background-color: f.$baseWhiteColor;
+    border-radius: 16px;
+
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 60px;
+        height: 60px;
+        position: absolute;
+    }
+
+    &::before {
+        border-left: solid 3px f.$accentColor;
+        border-top: solid 3px f.$accentColor;
+        top: 30px;
+        left: 40px;
+    }
+
+    &::after {
+        border-right: solid 3px f.$accentColor;
+        border-bottom: solid 3px f.$accentColor;
+        bottom: 30px;
+        right: 40px;
+    }
+}
+.l-topic-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.l-topic-content__ttl {
+    font-family: "Noto Sans JP";
+    font-size: 32px;
+    border-bottom: 4px solid f.$accentColor;
+
+    display: inline-block;
+}
+.l-topic-content__btn {
+    color: f.$accentColor;
+
+    padding: 4px 24px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        position: absolute;
+    }
+
+    &::before {
+        border-left: solid 2px f.$accentColor;
+        border-top: solid 2px f.$accentColor;
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        border-right: solid 2px f.$accentColor;
+        border-bottom: solid 2px f.$accentColor;
+        right: 0;
+        bottom: 0;
+    }
+}
