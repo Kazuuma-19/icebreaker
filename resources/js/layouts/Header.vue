@@ -11,10 +11,21 @@
                 />
             </a>
 
-            <Link href="/show" class="c-btn">会員登録・ログイン</Link>
+            <div v-if="user" class="d-flex align-items-center gap-3">
+                <div class="text-muted">{{ user.name }}</div>
+                <Link href="login" class="c-btn">ログアウト</Link>
+            </div>
+            <div v-else>
+                <Link href="login" class="c-btn">会員登録・ログイン</Link>
+            </div>
         </div>
     </header>
 </template>
 <script setup>
 import { Link } from "@inertiajs/vue3";
+import { usePage } from "@inertiajs/vue3";
+import { computed } from "vue";
+
+const page = usePage();
+const user = computed(() => page.props.user);
 </script>

@@ -1,0 +1,13 @@
+@use "../../foundation/" as f;
+
+.p-form-wrapper {
+    width: 500px;
+
+    background-color: f.$baseWhiteColor;
+    border-radius: 16px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

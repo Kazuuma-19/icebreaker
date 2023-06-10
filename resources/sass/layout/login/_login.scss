@@ -1,0 +1,10 @@
+@use "../../foundation/" as f;
+
+.l-login-message {
+    font-size: 14px;
+}
+
+.l-login-message__link {
+    color: f.$accentColor;
+    font-weight: bold;
+}

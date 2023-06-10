@@ -1,0 +1,28 @@
+@use "../../foundation/" as f;
+
+.c-form-title {
+    font-size: 36px;
+}
+.c-form-label {
+    font-size: 14px;
+}
+.c-form-input {
+    border: none;
+}
+.c-form-btn {
+    font-family: "Noto Sans JP";
+    color: f.$baseWhiteColor;
+    background-color: f.$accentColor;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px gray;
+
+    padding: 8px 24px;
+
+    &:hover {
+        color: f.$baseWhiteColor;
+        background-color: f.$accentColor;
+
+        opacity: 0.8;
+    }
+}

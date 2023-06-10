@@ -18,7 +18,7 @@ export default defineConfig({
                 includeAbsolute: false
             }
         }),
-        sassGlobImports({}), // ファイル一括import
+        sassGlobImports({}), // sassファイル一括import
         viteImagemin({ // 画像自動圧縮
             gifsicle: {
                 optimizationLevel: 7,

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/show', [IndexController::class, 'show']);
+
+Route::get('login', [AuthController::class, 'create']);
+Route::post('login', [AuthController::class, 'store']);
+Route::delete('logout', [AuthController::class, 'destroy']);
