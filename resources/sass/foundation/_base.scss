@@ -17,3 +17,10 @@ body {
 img {
     width: 100%;
 }
+
+a,
+button {
+    &:hover {
+        opacity: 0.8;
+    }
+}

@@ -13,10 +13,12 @@
 
             <div v-if="user" class="d-flex align-items-center gap-3">
                 <div class="text-muted">{{ user.name }}</div>
-                <Link href="login" class="c-btn">ログアウト</Link>
+                <Link href="logout" method="delete" class="c-btn">
+                    ログアウト
+                </Link>
             </div>
             <div v-else>
-                <Link href="login" class="c-btn">会員登録・ログイン</Link>
+                <Link href="login" class="c-btn">サインイン</Link>
             </div>
         </div>
     </header>
