@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\IndexController;
+use App\Http\Controllers\TopicController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [IndexController::class, 'index']);
-Route::get('/show', [IndexController::class, 'show']);
+Route::get('/', [TopicController::class, 'index']);
+// Route::get('/show', [TopicController::class, 'show']);
 
 // ログイン、ログアウト
 Route::get('login', [AuthController::class, 'create']);
