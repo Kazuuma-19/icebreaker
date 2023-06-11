@@ -6,6 +6,13 @@
 
 ## 技術
 
+### 使用技術
+
+HTML, CSS, JavaScript, PHP, SQL
+Sass, Bootstrap, Vue, Laravel
+
+Node.js, vite, inertia
+
 ### CSS Architecture
 
 FLOCS

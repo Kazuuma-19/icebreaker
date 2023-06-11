@@ -9,10 +9,15 @@
     border-radius: 10px;
     box-shadow: 0 4px 4px gray;
 
-    padding: 16px 20px;
+    padding: 16px 24px;
 
     &:hover {
         color: f.$baseWhiteColor;
         background-color: f.$mainColor;
     }
+
+    // デザイン変更用メモ
+    // font-weight: bold;
+    // color: f.$mainColor;
+    // border: 2px solid f.$mainColor;
 }

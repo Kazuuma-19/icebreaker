@@ -1,8 +1,22 @@
 <template>
     <div class="p-form-wrapper p-5">
-        <h2 class="c-form-title text-center mb-4">ログイン</h2>
+        <h2 class="c-form-title text-center mb-4">会員登録</h2>
 
-        <form @submit.prevent="login">
+        <form @submit.prevent="register">
+            <div class="form-group mb-4">
+                <label for="name" class="mb-1 c-form-label">名前</label>
+                <input
+                    v-model="form.name"
+                    type="name"
+                    class="form-control c-form-input mb-1"
+                    id="name"
+                    placeholder="Enter your name"
+                />
+                <div v-if="form.errors.name" class="text-danger">
+                    {{ form.errors.name }}
+                </div>
+            </div>
+
             <div class="form-group mb-4">
                 <label for="email" class="mb-1 c-form-label">
                     メールアドレス
@@ -36,17 +50,22 @@
                 </div>
             </div>
 
-            <div class="l-login-message mb-5 text-center">
-                アカウントをもっていない場合は
-                <Link href="register" class="l-login-message__link">
-                    会員登録
-                </Link>
-                をしてください
+            <div class="form-group mb-4">
+                <label for="password_confirmation" class="mb-1 c-form-label">
+                    パスワード確認
+                </label>
+                <input
+                    v-model="form.password_confirmation"
+                    type="password"
+                    class="form-control c-form-input mb-1"
+                    id="password_confirmation"
+                    placeholder="Password"
+                />
             </div>
 
             <div class="text-center">
                 <button type="submit" class="btn btn-primary c-form-btn">
-                    ログイン
+                    登録
                 </button>
             </div>
         </form>
@@ -54,13 +73,14 @@
 </template>
 
 <script setup>
-import { Link } from "@inertiajs/vue3";
 import { useForm } from "@inertiajs/vue3";
 
 const form = useForm({
+    name: null,
     email: null,
     password: null,
+    password_confirmation: null,
 });
 
-const login = () => form.post("login");
+const register = () => form.post("register");
 </script>

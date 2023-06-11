@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('topic');
-            $table->string('category');
+            $table->string('category')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')

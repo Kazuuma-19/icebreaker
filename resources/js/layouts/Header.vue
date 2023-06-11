@@ -17,8 +17,9 @@
                     ログアウト
                 </Link>
             </div>
-            <div v-else>
-                <Link href="login" class="c-btn">サインイン</Link>
+            <div v-else class="d-flex align-items-center gap-3 text-center">
+                <Link href="register" class="c-btn">会員登録</Link>
+                <Link href="login" class="c-btn">ログイン</Link>
             </div>
         </div>
     </header>

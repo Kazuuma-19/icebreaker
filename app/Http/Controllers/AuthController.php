@@ -13,6 +13,7 @@ class AuthController extends Controller
     }
 
     public function store(Request $request) {
+        // validation失敗時
         if (!Auth::attempt($request->validate([
             'email' => 'required|string|email',
             'password' => 'required|string'

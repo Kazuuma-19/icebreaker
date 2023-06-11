@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/show', [IndexController::class, 'show']);
 
+// ログイン、ログアウト
 Route::get('login', [AuthController::class, 'create']);
 Route::post('login', [AuthController::class, 'store']);
 Route::delete('logout', [AuthController::class, 'destroy']);
+
+// 会員登録
+Route::resource('register', UserController::class);
