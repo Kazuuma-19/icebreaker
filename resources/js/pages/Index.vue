@@ -13,8 +13,22 @@
                         </div>
                     </div>
 
-                    <a class="l-topic-content__btn" @click="display">Display</a>
+                    <a
+                        v-if="user"
+                        class="l-topic-content__btn"
+                        @click="display"
+                    >
+                        Display
+                    </a>
+                    <a v-else class="l-topic-content__btn" @click="displayAll">
+                        hello
+                    </a>
                 </div>
+            </div>
+
+            <div v-if="user" class="text-center mt-4">
+                <a href="" class="l-topic-change-btn me-5">自分のみ</a>
+                <a href="" class="l-topic-change-btn active">全ユーザー</a>
             </div>
         </div>
     </MainLayout>
@@ -22,21 +36,39 @@
 
 <script setup>
 import { Link, usePage } from "@inertiajs/vue3";
-import { ref, toRefs } from "vue";
+import axios from "axios";
+import { computed, ref } from "vue";
 import MainLayout from "../layouts/MainLayout.vue";
 
 const page = usePage();
+const user = computed(() => page.props.user);
+
 const topic = ref([]);
 
-// お題を表示
-const display = () => {
-    // お題を取得
-    const topics = page.props.topics;
+// ユーザーのお題を表示
+const getUserTopics = () => {
+    axios
+        .get(route("userTopics"))
+        .then((response) => {
+            topic.value = response.data;
+        })
+        .catch((error) => console.log(error));
+};
+const display = async () => {
+    await getUserTopics();
+};
 
-    // お題が存在する場合
-    if (topics.length > 0) {
-        const index = Math.floor(Math.random() * topics.length);
-        topic.value = topics[index];
-    }
+// 全てのお題を表示
+const getTopics = () => {
+    axios
+        .get(route("topics"))
+        .then((response) => {
+            topic.value = response.data;
+            console.log(topic.value);
+        })
+        .catch((error) => console.log(error));
+};
+const displayAll = async () => {
+    await getTopics();
 };
 </script>

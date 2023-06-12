@@ -16,12 +16,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [TopicController::class, 'index']);
-// Route::get('/show', [TopicController::class, 'show']);
+
+// お題を取得
+Route::get('topics', [TopicController::class, 'getTopics'])
+  ->name('topics');
+// ユーザーのお題のみ取得
+Route::get('user-topics', [TopicController::class, 'getAllTopics'])
+  ->name('userTopics');
 
 // ログイン、ログアウト
-Route::get('login', [AuthController::class, 'create']);
-Route::post('login', [AuthController::class, 'store']);
-Route::delete('logout', [AuthController::class, 'destroy']);
+Route::get('login', [AuthController::class, 'create'])
+  ->name('login');
+Route::post('login', [AuthController::class, 'store'])
+  ->name('login.store');
+Route::delete('logout', [AuthController::class, 'destroy'])
+  ->name('logout');
 
 // 会員登録
 Route::resource('register', UserController::class);

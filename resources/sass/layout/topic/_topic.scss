@@ -87,3 +87,22 @@
         bottom: 0;
     }
 }
+
+// 表示するお題を切り替え
+.l-topic-change-btn {
+    font-size: 20px;
+    font-weight: bold;
+    color: f.$mainColor;
+    background: f.$baseWhiteColor;
+    border-radius: 50%;
+
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+
+    display: inline-block;
+}
+.l-topic-change-btn.active {
+    color: f.$baseWhiteColor;
+    background: f.$accentColor;
+}

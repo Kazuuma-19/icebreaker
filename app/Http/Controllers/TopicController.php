@@ -3,24 +3,32 @@
 namespace App\Http\Controllers;
 
 use App\Models\Topic;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Inertia\Inertia;
 
 class TopicController extends Controller
 {
     public function index() {
+        return inertia('Index');
+    }
+    
+    // ユーザーのお題を取得
+    public function getTopics() {
+        $topics = Topic::query()
+            ->inRandomOrder()
+            ->first();
+
+        return $topics;
+    }
+
+    // 全てのお題を取得
+    public function getAllTopics() {
         $user = Auth::user();
         
         $topics = Topic::query()
             ->where('user_id', $user->id)
-            ->get();
+            ->inRandomOrder()
+            ->first();
 
-        return Inertia::render('Index', [
-            'topics' => $topics
-        ]);
+        return $topics;
     }
-    // public function show() {
-    //     return @inertia('Show');
-    // }
 }

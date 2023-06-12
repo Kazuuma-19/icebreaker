@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Icebreaker</title>
+        @routes
         @vite(['resources/sass/style.scss', 'resources/js/app.js'])
         @inertiaHead
     </head>
