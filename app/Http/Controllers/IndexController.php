@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Topic;
 use Illuminate\Support\Facades\Auth;
 
-class TopicController extends Controller
+class IndexController extends Controller
 {
     public function index() {
         return inertia('Index');

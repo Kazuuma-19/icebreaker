@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\TopicController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [TopicController::class, 'index']);
+Route::get('/', [IndexController::class, 'index']);
 
 // お題を取得
-Route::get('topics', [TopicController::class, 'getTopics'])
+Route::get('topics', [IndexController::class, 'getTopics'])
   ->name('topics');
 // ユーザーのお題のみ取得
-Route::get('user-topics', [TopicController::class, 'getAllTopics'])
+Route::get('user-topics', [IndexController::class, 'getAllTopics'])
   ->name('userTopics');
 
 // ログイン、ログアウト
