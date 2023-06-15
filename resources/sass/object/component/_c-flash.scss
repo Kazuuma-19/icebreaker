@@ -1,0 +1,7 @@
+@use "../../foundation/" as f;
+
+.c-flash {
+    font-weight: bold;
+    color: f.$mainColor;
+    background-color: f.$baseWhiteColor;
+}

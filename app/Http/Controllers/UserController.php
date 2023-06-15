@@ -11,6 +11,7 @@ class UserController extends Controller
     public function index() {
         return inertia('user/Register');
     }
+    
     public function store(Request $request) {
         $user = User::create($request->validate([
             'name' => 'required',
@@ -20,6 +21,7 @@ class UserController extends Controller
         
         Auth::login($user);
 
-        return redirect('/');
+        return redirect()
+            ->with('success', '登録が完了しました');
     }
 }

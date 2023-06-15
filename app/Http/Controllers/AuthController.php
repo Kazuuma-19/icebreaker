@@ -8,10 +8,21 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
+    /**
+     * ログインページを表示
+     *
+     * @return void
+     */
     public function create() {
         return inertia('auth/Login');
     }
 
+    /**
+     * ログイン
+     *
+     * @param Request $request
+     * @return void
+     */
     public function store(Request $request) {
         // validation失敗時
         if (!Auth::attempt($request->validate([
@@ -25,15 +36,24 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended();
+        // 直前のURLにリダイレクト
+        return redirect()->intended()
+            ->with('success', 'ログインしました');
     }
 
+    /**
+     * ログアウト
+     *
+     * @param Request $request
+     * @return void
+     */
     public function destroy(Request $request) {
         Auth::logout();
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/')
+            ->with('success', 'ログアウトしました');
     }
 }

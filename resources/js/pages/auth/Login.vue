@@ -54,8 +54,7 @@
 </template>
 
 <script setup>
-import { Link } from "@inertiajs/vue3";
-import { useForm } from "@inertiajs/vue3";
+import { Link, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
     email: null,

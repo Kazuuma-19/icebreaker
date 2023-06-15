@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [IndexController::class, 'index']);
+Route::get('/', [IndexController::class, 'index'])
+  ->name('top');
 
 // お題を取得
 Route::get('topics', [IndexController::class, 'getTopics'])
