@@ -32,14 +32,14 @@
             <div v-if="user" class="text-center mt-4">
                 <button
                     class="l-topic-change-btn me-5"
-                    :class="{ active: isUserActive }"
+                    :class="{ active: isUser }"
                     @click="userTopics"
                 >
                     自分のみ
                 </button>
                 <button
                     class="l-topic-change-btn"
-                    :class="{ active: !isUserActive }"
+                    :class="{ active: isAllUser }"
                     @click="allTopics"
                 >
                     全ユーザー
@@ -61,11 +61,8 @@ const page = usePage();
 const user = computed(() => page.props.user);
 
 // 表示するお題を切り替え
-const isUser = ref(true);
-const isAllUser = ref(false);
-
-// ボタンを切り替え
-const isUserActive = ref(true);
+const isAllUser = ref(true);
+const isUser = ref(false);
 
 // お題一覧
 const topic = ref([]);
@@ -101,18 +98,10 @@ const displayAll = async () => {
 const userTopics = () => {
     isAllUser.value = false;
     isUser.value = true;
-
-    if (!isUserActive.value) {
-        isUserActive.value = !isUserActive.value;
-    }
 };
 // 全ユーザーボタンをクリック
 const allTopics = () => {
     isUser.value = false;
     isAllUser.value = true;
-
-    if (isUserActive.value) {
-        isUserActive.value = !isUserActive.value;
-    }
 };
 </script>

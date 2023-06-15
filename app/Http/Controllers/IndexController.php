@@ -7,11 +7,20 @@ use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
+    /**
+     * トップページを表示
+     *
+     * @return void
+     */
     public function index() {
         return inertia('Index');
     }
     
-    // ユーザーのお題を取得
+    /**
+     * ユーザーのお題を取得
+     *
+     * @return void
+     */
     public function getTopics() {
         $topics = Topic::query()
             ->inRandomOrder()
@@ -20,7 +29,11 @@ class IndexController extends Controller
         return $topics;
     }
 
-    // 全てのお題を取得
+    /**
+     * 全てのお題を取得
+     *
+     * @return void
+     */
     public function getAllTopics() {
         $user = Auth::user();
         
