@@ -15,7 +15,7 @@
             <tbody>
                 <tr v-for="topic in topics">
                     <!-- 編集 -->
-                    <template v-if="isEdit == topic.id">
+                    <template v-if="isEdit == topic">
                         <td>
                             <input
                                 v-model="topic.topic"
