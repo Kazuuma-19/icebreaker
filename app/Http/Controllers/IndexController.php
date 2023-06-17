@@ -13,15 +13,15 @@ class IndexController extends Controller
      * @return void
      */
     public function index() {
-        return inertia('Index');
+        return inertia('TopIndex');
     }
     
     /**
-     * ユーザーのお題を取得
+     * 全てのお題を取得
      *
      * @return void
      */
-    public function getTopics() {
+    public function getAllTopics() {
         $topics = Topic::query()
             ->inRandomOrder()
             ->first();
@@ -30,11 +30,11 @@ class IndexController extends Controller
     }
 
     /**
-     * 全てのお題を取得
+     * ユーザーのお題を取得
      *
      * @return void
      */
-    public function getAllTopics() {
+    public function getUserTopics() {
         $user = Auth::user();
         
         $topics = Topic::query()

@@ -13,7 +13,7 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function create() {
+    public function index() {
         return inertia('auth/Login');
     }
 

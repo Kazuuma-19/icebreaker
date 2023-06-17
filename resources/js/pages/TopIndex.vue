@@ -1,14 +1,14 @@
 <template>
     <MainLayout>
-        <div class="l-topic-wrapper">
+        <div class="l-top-wrapper">
             <div class="text-center">
-                <h2 class="l-topic-title mb-5">TOPIC</h2>
+                <h2 class="l-top-title mb-5">TOPIC</h2>
             </div>
 
-            <div class="l-topic-box p-4 text-center">
-                <div class="l-topic-content">
+            <div class="l-top-box p-4 text-center">
+                <div class="l-top-content">
                     <div>
-                        <div class="l-topic-content__ttl p-2 mb-4">
+                        <div class="l-top-content__ttl p-2 mb-4">
                             {{ topic.topic }}
                         </div>
                     </div>
@@ -16,13 +16,13 @@
                     <!-- 自分のお題のみ表示 -->
                     <a
                         v-if="isUser"
-                        class="l-topic-content__btn"
+                        class="l-top-content__btn"
                         @click="display"
                     >
                         Display
                     </a>
                     <!-- 全ユーザーのお題を表示 -->
-                    <a v-else class="l-topic-content__btn" @click="displayAll">
+                    <a v-else class="l-top-content__btn" @click="displayAll">
                         Display All
                     </a>
                 </div>
@@ -31,14 +31,14 @@
             <!-- userが存在していれば処理 -->
             <div v-if="user" class="text-center mt-4">
                 <button
-                    class="l-topic-change-btn me-5"
+                    class="l-top-change-btn me-5"
                     :class="{ active: isUser }"
                     @click="userTopics"
                 >
                     自分のみ
                 </button>
                 <button
-                    class="l-topic-change-btn"
+                    class="l-top-change-btn"
                     :class="{ active: isAllUser }"
                     @click="allTopics"
                 >
@@ -50,22 +50,22 @@
 </template>
 
 <script setup>
-import { Link, usePage } from "@inertiajs/vue3";
+import { usePage } from "@inertiajs/vue3";
 import axios from "axios";
 import { computed, ref } from "vue";
 import MainLayout from "../layouts/MainLayout.vue";
 
 const page = usePage();
 
-// ログインしているかどうか（trueのものを表示）
+// ログインしているuser情報
 const user = computed(() => page.props.user);
-
-// 表示するお題を切り替え
-const isAllUser = ref(true);
-const isUser = ref(false);
 
 // お題一覧
 const topic = ref([]);
+
+// 表示するお題を切り替え（初期値：allUser）
+const isAllUser = ref(true);
+const isUser = ref(false);
 
 // ユーザーのお題を表示
 const getUserTopics = () => {
@@ -83,7 +83,7 @@ const display = async () => {
 // 全てのお題を表示
 const getTopics = () => {
     axios
-        .get(route("topics"))
+        .get(route("allTopics"))
         .then((response) => {
             topic.value = response.data;
             console.log(topic.value);

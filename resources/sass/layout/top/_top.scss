@@ -1,6 +1,6 @@
 @use "../../foundation/" as f;
 
-.l-topic-title {
+.l-top-title {
     font-size: 64px;
     color: f.$accentColor;
     border-top: 2px solid f.$accentColor;
@@ -10,7 +10,7 @@
 }
 
 // box
-.l-topic-box {
+.l-top-box {
     height: 240px;
 
     background-color: f.$baseWhiteColor;
@@ -40,20 +40,20 @@
         right: 40px;
     }
 }
-.l-topic-content {
+.l-top-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.l-topic-content__ttl {
+.l-top-content__ttl {
     font-family: "Noto Sans JP";
     font-size: 32px;
     border-bottom: 4px solid f.$accentColor;
 
     display: inline-block;
 }
-.l-topic-content__btn {
+.l-top-content__btn {
     color: f.$accentColor;
 
     padding: 4px 24px;
@@ -89,7 +89,7 @@
 }
 
 // 表示するお題を切り替え
-.l-topic-change-btn {
+.l-top-change-btn {
     font-size: 20px;
     font-weight: bold;
     color: f.$mainColor;
@@ -103,7 +103,7 @@
 
     display: inline-block;
 }
-.l-topic-change-btn.active {
+.l-top-change-btn.active {
     color: f.$baseWhiteColor;
     background: f.$accentColor;
 }

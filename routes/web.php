@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\TopicController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,14 +20,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index'])
   ->name('top');
 // お題を取得
-Route::get('topics', [IndexController::class, 'getTopics'])
-  ->name('topics');
+Route::get('top', [IndexController::class, 'getAllTopics'])
+  ->name('allTopics');
 // ユーザーのお題のみ取得
-Route::get('user-topics', [IndexController::class, 'getAllTopics'])
+Route::get('user-top', [IndexController::class, 'getUserTopics'])
   ->name('userTopics');
 
+// お題管理ページ
+Route::resource('topics', TopicController::class);
+
 // ログイン、ログアウト
-Route::get('login', [AuthController::class, 'create'])
+Route::get('login', [AuthController::class, 'index'])
   ->name('login');
 Route::post('login', [AuthController::class, 'store'])
   ->name('login.store');

@@ -3,16 +3,17 @@
         <div
             class="container d-flex align-items-center justify-content-between"
         >
-            <a href="#">
+            <Link href="/">
                 <img
                     src="../../../public/img/logo.png"
                     alt="ロゴ"
                     class="l-logo"
                 />
-            </a>
+            </Link>
 
-            <div v-if="user" class="d-flex align-items-center gap-3">
+            <div v-if="user" class="d-flex align-items-center gap-4">
                 <div class="text-muted">{{ user.name }}</div>
+                <Link href="topics" class="c-btn"> お題の管理 </Link>
                 <Link href="logout" method="delete" class="c-btn">
                     ログアウト
                 </Link>
