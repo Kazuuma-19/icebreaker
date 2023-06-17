@@ -15,7 +15,7 @@
             <tbody>
                 <tr v-for="topic in topics">
                     <!-- 編集 -->
-                    <template v-if="isEdit">
+                    <template v-if="isEdit == topic.id">
                         <td>
                             <input
                                 v-model="topic.topic"
@@ -144,28 +144,27 @@ import { computed, ref } from "vue";
 import MainLayout from "../../layouts/MainLayout.vue";
 
 const page = usePage();
-
-const isEdit = ref(false);
-
-const topics = computed(() => page.props.topics);
-
 const form = useForm({
     topic: null,
     category: null,
     public: true,
 });
+
+const topics = computed(() => page.props.topics);
+
+const isEdit = ref();
+
 // 登録
 const create = () => {
     form.post("topics");
 };
 // 編集状態の変更
 const editTopic = (topic) => {
-    isEdit.value = !isEdit.value;
+    isEdit.value = topic;
 };
 // 編集完了
 const update = (topic) => {
     router.put(`topics/${topic.id}`, topic);
-    isEdit.value = false;
 };
 // 削除
 const remove = (id) => {

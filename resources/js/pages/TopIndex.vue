@@ -86,7 +86,6 @@ const getTopics = () => {
         .get(route("allTopics"))
         .then((response) => {
             topic.value = response.data;
-            console.log(topic.value);
         })
         .catch((error) => console.log(error));
 };

@@ -63,6 +63,7 @@ class TopicController extends Controller
         return redirect('topics')
             ->with('success', '更新しました');
     }
+    
     /**
      * お題を削除
      *
