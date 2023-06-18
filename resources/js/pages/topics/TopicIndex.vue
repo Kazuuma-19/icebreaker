@@ -165,7 +165,6 @@ const editTopic = (topic) => {
 };
 // お題を編集
 const update = (topic) => {
-    console.log(topic);
     router.put(`topics/${topic.id}`, topic);
 };
 // お題の削除
