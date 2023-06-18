@@ -37,6 +37,7 @@
                                     type="checkbox"
                                     role="switch"
                                     :checked="topic.public"
+                                    @change="topic.public = !topic.public"
                                 />
                             </div>
                         </td>
@@ -125,7 +126,7 @@
                             class="btn l-topic-btn l-topic-btn--register c-topic-btn"
                             @click="create"
                         >
-                            登録
+                            追加
                         </button>
                     </td>
                 </tr>
@@ -154,19 +155,20 @@ const topics = computed(() => page.props.topics);
 
 const isEdit = ref();
 
-// 登録
+// お題の追加
 const create = () => {
     form.post("topics");
 };
-// 編集状態の変更
+// お題の編集状態を切り替え
 const editTopic = (topic) => {
     isEdit.value = topic;
 };
-// 編集完了
+// お題を編集
 const update = (topic) => {
+    console.log(topic);
     router.put(`topics/${topic.id}`, topic);
 };
-// 削除
+// お題の削除
 const remove = (id) => {
     router.delete(`topics/${id}`, {
         onBefore: () => confirm("本当に削除しますか？"),

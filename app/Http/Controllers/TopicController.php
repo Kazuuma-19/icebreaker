@@ -54,7 +54,6 @@ class TopicController extends Controller
      * @return void
      */
     public function update(Request $request, Topic $topic) {
-        // dd($topic->public);
         $topic->topic = $request->topic;
         $topic->category = $request->category;
         $topic->public = $request->public;
