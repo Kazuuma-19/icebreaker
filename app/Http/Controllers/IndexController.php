@@ -23,6 +23,7 @@ class IndexController extends Controller
      */
     public function getAllTopics() {
         $topics = Topic::query()
+            ->where('public', true)
             ->inRandomOrder()
             ->first();
 
@@ -38,6 +39,7 @@ class IndexController extends Controller
         $user = Auth::user();
         
         $topics = Topic::query()
+            ->where('public', true)
             ->where('user_id', $user->id)
             ->inRandomOrder()
             ->first();
