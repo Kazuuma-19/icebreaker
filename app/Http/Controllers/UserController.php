@@ -21,7 +21,7 @@ class UserController extends Controller
         
         Auth::login($user);
 
-        return redirect()
+        return redirect('/')
             ->with('success', '登録が完了しました');
     }
 }
