@@ -2,19 +2,9 @@
 
 .c-btn {
     font-family: "Noto Sans JP";
-    font-size: 18px;
-    color: f.$baseWhiteColor;
-    background-color: f.$mainColor;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 4px gray;
-
-    padding: 16px 24px;
-
-    &:hover {
-        color: f.$baseWhiteColor;
-        background-color: f.$mainColor;
-    }
 
     // デザイン変更用メモ
     // font-weight: bold;

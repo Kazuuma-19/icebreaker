@@ -1,0 +1,25 @@
+/****************************************:
+
+header
+
+*****************************************:*/
+
+@use "../../foundation" as f;
+
+.l-header {
+    border-bottom: 12px double f.$mainColor;
+}
+.l-logo {
+    width: 300px;
+}
+.l-header-btn {
+    font-size: 18px;
+    color: f.$baseWhiteColor;
+    background-color: f.$mainColor;
+    padding: 16px 24px;
+
+    &:hover {
+        color: f.$baseWhiteColor;
+        background-color: f.$mainColor;
+    }
+}

@@ -11,16 +11,20 @@
                 />
             </Link>
 
+            <!-- ログイン時 -->
             <div v-if="user" class="d-flex align-items-center gap-4">
                 <div class="text-muted">{{ user.name }}</div>
-                <Link href="topics" class="c-btn"> お題の管理 </Link>
-                <Link href="logout" method="delete" class="c-btn">
+                <Link href="topics" class="c-btn l-header-btn">
+                    お題の管理
+                </Link>
+                <Link href="logout" method="delete" class="c-btn l-header-btn">
                     ログアウト
                 </Link>
             </div>
+
             <div v-else class="d-flex align-items-center gap-3 text-center">
-                <Link href="register" class="c-btn">会員登録</Link>
-                <Link href="login" class="c-btn">ログイン</Link>
+                <Link href="login" class="c-btn l-header-btn">ログイン</Link>
+                <Link href="register" class="c-btn l-header-btn">会員登録</Link>
             </div>
         </div>
     </header>

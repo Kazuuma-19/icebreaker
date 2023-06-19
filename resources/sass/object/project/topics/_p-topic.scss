@@ -1,0 +1,80 @@
+@use "../../../foundation/" as f;
+
+tr {
+    border-bottom: 1px solid f.$baseBlackColor;
+}
+th,
+td {
+    padding: 16px !important;
+}
+
+.p-topic-title {
+    font-size: 40px;
+}
+.p-topic-header {
+    color: f.$baseWhiteColor;
+    background-color: f.$mainColor;
+}
+
+.p-topic-btn {
+    color: f.$baseWhiteColor;
+    border-radius: 8px;
+
+    padding: 8px 24px;
+
+    // 追加
+    &--register {
+        background-color: f.$accentColor;
+
+        &:hover {
+            color: f.$baseWhiteColor;
+            background-color: f.$accentColor;
+        }
+    }
+    // 編集
+    &--edit {
+        background-color: f.$mainColor;
+
+        &:hover {
+            color: f.$baseWhiteColor;
+            background-color: f.$mainColor;
+        }
+    }
+    // 削除
+    &--delete {
+        background-color: f.$accentColor;
+
+        &:hover {
+            color: f.$baseWhiteColor;
+            background-color: f.$accentColor;
+        }
+    }
+}
+// トップへ戻るボタン
+.p-topic-top-btn {
+    font-size: 18px;
+    width: 160px;
+    color: f.$baseWhiteColor;
+    background: f.$mainColor;
+    border-radius: 30px;
+
+    padding: 16px 30px;
+
+    &:hover {
+        color: f.$baseWhiteColor;
+        background-color: f.$mainColor;
+    }
+}
+
+// form
+.p-topic-input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+.form-check-input {
+    &:checked {
+        background-color: f.$mainColor;
+        border-color: f.$mainColor;
+    }
+}
