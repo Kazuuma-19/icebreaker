@@ -7,12 +7,12 @@
     "assets": [
       "assets/logo-acd0f701.png"
     ],
-    "file": "assets/app-f8a862c1.js",
+    "file": "assets/app-8eced72e.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/sass/style.scss": {
-    "file": "assets/style-db97d467.css",
+    "file": "assets/style-026a4a05.css",
     "isEntry": true,
     "src": "resources/sass/style.scss"
   }

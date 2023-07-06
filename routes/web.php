@@ -27,6 +27,8 @@ Route::get('user-top', [IndexController::class, 'getUserTopics'])
   ->name('userTopics');
 
 // お題管理ページ
+Route::get('topics', [TopicController::class, 'index'])
+  ->name('topics.index');
 Route::resource('topics', TopicController::class);
 
 // ログイン、ログアウト
@@ -38,4 +40,6 @@ Route::delete('logout', [AuthController::class, 'destroy'])
   ->name('logout');
 
 // 会員登録
+Route::get('register', [UserController::class, 'index'])
+  ->name('register.index');
 Route::resource('register', UserController::class);
