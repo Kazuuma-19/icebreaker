@@ -1,0 +1,19 @@
+{
+  "public/img/logo.png": {
+    "file": "assets/logo-acd0f701.png",
+    "src": "public/img/logo.png"
+  },
+  "resources/js/app.js": {
+    "assets": [
+      "assets/logo-acd0f701.png"
+    ],
+    "file": "assets/app-f8a862c1.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/sass/style.scss": {
+    "file": "assets/style-db97d467.css",
+    "isEntry": true,
+    "src": "resources/sass/style.scss"
+  }
+}
