@@ -42,7 +42,7 @@ class TopicController extends Controller
         $topics->public = $request->input('public');
         $topics->save();
 
-        return redirect('topics')
+        return redirect()->route('topics.index')
             ->with('success', '追加しました');
     }
 
@@ -59,7 +59,7 @@ class TopicController extends Controller
         $topic->public = $request->public;
         $topic->save();
 
-        return redirect('topics')
+        return redirect()->route('topics.index')
             ->with('success', '更新しました');
     }
     
@@ -72,7 +72,7 @@ class TopicController extends Controller
     public function destroy(Topic $topic) {
         $topic->delete();
 
-        return redirect('topics')
+        return redirect()->route('topics.index')
             ->with('success', '削除しました');
     }
 }

@@ -134,7 +134,9 @@
         </table>
 
         <div class="text-center">
-            <Link href="/" class="btn c-btn p-topic-top-btn"> トップへ </Link>
+            <Link :href="route('top')" class="btn c-btn p-topic-top-btn">
+                トップへ
+            </Link>
         </div>
     </MainLayout>
 </template>

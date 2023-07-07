@@ -1,18 +1,18 @@
 {
-  "public/img/logo.png": {
-    "file": "assets/logo-acd0f701.png",
-    "src": "public/img/logo.png"
+  "public/build/assets/logo-acd0f701.png": {
+    "file": "assets/logo-acd0f701-bceae931.png",
+    "src": "public/build/assets/logo-acd0f701.png"
   },
   "resources/js/app.js": {
     "assets": [
-      "assets/logo-acd0f701.png"
+      "assets/logo-acd0f701-bceae931.png"
     ],
-    "file": "assets/app-8eced72e.js",
+    "file": "assets/app-5cf6ab54.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/sass/style.scss": {
-    "file": "assets/style-026a4a05.css",
+    "file": "assets/style-db97d467.css",
     "isEntry": true,
     "src": "resources/sass/style.scss"
   }

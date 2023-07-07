@@ -38,7 +38,10 @@
 
             <div class="l-login-message mb-5 text-center">
                 アカウントをもっていない場合は
-                <Link href="register" class="l-login-message__link">
+                <Link
+                    :href="route('register.index')"
+                    class="l-login-message__link"
+                >
                     会員登録
                 </Link>
                 をしてください
