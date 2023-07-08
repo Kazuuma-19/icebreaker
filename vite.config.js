@@ -14,9 +14,11 @@ export default defineConfig({
         }),
         vue({
             template: {
-                base: '/icebreaker/',
-                includeAbsolute: false
-            }
+                transformAssetUrls: {
+                    base: 'icebreaker/build',
+                    includeAbsolute: false
+                },
+            },
         }),
         sassGlobImports({}), // sassファイル一括import
         viteImagemin({ // 画像自動圧縮
