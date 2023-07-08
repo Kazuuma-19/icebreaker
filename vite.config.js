@@ -15,7 +15,7 @@ export default defineConfig({
         vue({
             template: {
                 transformAssetUrls: {
-                    base: '/icebreaker/build',
+                    base: '/icebreaker/build/',
                     includeAbsolute: false
                 },
             },
