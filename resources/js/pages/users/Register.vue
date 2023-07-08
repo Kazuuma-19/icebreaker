@@ -82,5 +82,5 @@ const form = useForm({
     password_confirmation: null,
 });
 
-const register = () => form.post("register");
+const register = () => form.post(route("register"));
 </script>

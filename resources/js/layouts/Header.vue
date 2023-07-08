@@ -26,9 +26,12 @@
                 <Link :href="route('login')" class="c-btn l-header-btn">
                     ログイン
                 </Link>
-                <Link :href="route('register.index')" class="c-btn l-header-btn"
-                    >会員登録</Link
+                <Link
+                    :href="route('register.index')"
+                    class="c-btn l-header-btn"
                 >
+                    会員登録
+                </Link>
             </div>
         </div>
     </header>
@@ -36,7 +39,7 @@
 <script setup>
 import { Link, usePage } from "@inertiajs/vue3";
 import { computed } from "vue";
-import logo from "@/../../public/build/assets/logo-acd0f701.png";
+import logo from "@/../../public/img/logo.png";
 
 const page = usePage();
 const user = computed(() => page.props.user);

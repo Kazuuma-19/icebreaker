@@ -7,6 +7,7 @@ import viteImagemin from 'vite-plugin-imagemin';
 import path from 'path';
 
 export default defineConfig({
+    base: '/icebreaker',
     plugins: [
         laravel({
             input: ['resources/sass/style.scss', 'resources/js/app.js'],

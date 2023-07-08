@@ -1,13 +1,13 @@
 {
-  "public/build/assets/logo-acd0f701.png": {
-    "file": "assets/logo-acd0f701-bceae931.png",
-    "src": "public/build/assets/logo-acd0f701.png"
+  "public/img/logo.png": {
+    "file": "assets/logo-acd0f701.png",
+    "src": "public/img/logo.png"
   },
   "resources/js/app.js": {
     "assets": [
-      "assets/logo-acd0f701-bceae931.png"
+      "assets/logo-acd0f701.png"
     ],
-    "file": "assets/app-5cf6ab54.js",
+    "file": "assets/app-beb25071.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
