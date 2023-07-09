@@ -7,7 +7,7 @@ import viteImagemin from 'vite-plugin-imagemin';
 import path from 'path';
 
 export default defineConfig({
-    base: '/top/',
+    base: '/index/',
     plugins: [
         laravel({
             input: ['resources/sass/style.scss', 'resources/js/app.js'],
