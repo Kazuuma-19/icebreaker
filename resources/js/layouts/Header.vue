@@ -4,7 +4,12 @@
             class="container d-flex align-items-center justify-content-between"
         >
             <Link :href="route('top')">
-                <img :src="logo" alt="ロゴ" class="l-logo" height="100" />
+                <img
+                    src="/public/img/logo.png"
+                    alt="ロゴ"
+                    class="l-logo"
+                    height="100"
+                />
             </Link>
 
             <!-- ログイン時 -->
@@ -39,7 +44,7 @@
 <script setup>
 import { Link, usePage } from "@inertiajs/vue3";
 import { computed } from "vue";
-import logo from "@/../../public/img/logo.png";
+// import logo from "@/../../public/img/logo.png";
 
 const page = usePage();
 const user = computed(() => page.props.user);
