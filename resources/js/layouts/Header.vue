@@ -44,7 +44,6 @@
 <script setup>
 import { Link, usePage } from "@inertiajs/vue3";
 import { computed } from "vue";
-// import logo from "@/../../public/img/logo.png";
 
 const page = usePage();
 const user = computed(() => page.props.user);
