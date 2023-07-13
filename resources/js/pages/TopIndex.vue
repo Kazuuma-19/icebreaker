@@ -50,57 +50,57 @@
 </template>
 
 <script setup>
-// import { usePage } from "@inertiajs/vue3";
-// import axios from "axios";
-// import { computed, ref } from "vue";
-// import MainLayout from "../layouts/MainLayout.vue";
+import { usePage } from "@inertiajs/vue3";
+import axios from "axios";
+import { computed, ref } from "vue";
+import MainLayout from "../layouts/MainLayout.vue";
 
-// const page = usePage();
+const page = usePage();
 
-// // ログインしているuser情報
-// const user = computed(() => page.props.user);
+// ログインしているuser情報
+const user = computed(() => page.props.user);
 
-// // お題一覧
-// const topic = ref([]);
+// お題一覧
+const topic = ref([]);
 
-// // 表示するお題を切り替え（初期値：allUser）
-// const isAllUser = ref(true);
-// const isUser = ref(false);
+// 表示するお題を切り替え（初期値：allUser）
+const isAllUser = ref(true);
+const isUser = ref(false);
 
-// // ユーザーのお題を表示
-// const getUserTopics = () => {
-//     axios
-//         .get(route("userTopics"))
-//         .then((response) => {
-//             topic.value = response.data;
-//         })
-//         .catch((error) => console.log(error));
-// };
-// const display = async () => {
-//     await getUserTopics();
-// };
+// ユーザーのお題を表示
+const getUserTopics = () => {
+    axios
+        .get(route("userTopics"))
+        .then((response) => {
+            topic.value = response.data;
+        })
+        .catch((error) => console.log(error));
+};
+const display = async () => {
+    await getUserTopics();
+};
 
-// // 全てのお題を表示
-// const getTopics = () => {
-//     axios
-//         .get(route("allTopics"))
-//         .then((response) => {
-//             topic.value = response.data;
-//         })
-//         .catch((error) => console.log(error));
-// };
-// const displayAll = async () => {
-//     await getTopics();
-// };
+// 全てのお題を表示
+const getTopics = () => {
+    axios
+        .get(route("allTopics"))
+        .then((response) => {
+            topic.value = response.data;
+        })
+        .catch((error) => console.log(error));
+};
+const displayAll = async () => {
+    await getTopics();
+};
 
-// // 自分のみボタンをクリック
-// const userTopics = () => {
-//     isAllUser.value = false;
-//     isUser.value = true;
-// };
-// // 全ユーザーボタンをクリック
-// const allTopics = () => {
-//     isUser.value = false;
-//     isAllUser.value = true;
-// };
+// 自分のみボタンをクリック
+const userTopics = () => {
+    isAllUser.value = false;
+    isUser.value = true;
+};
+// 全ユーザーボタンをクリック
+const allTopics = () => {
+    isUser.value = false;
+    isAllUser.value = true;
+};
 </script>
