@@ -4,6 +4,9 @@
     </IfModule>
 
     RewriteEngine On
+    RewriteBase /
+
+    RewriteRule ^icebreaker/icebreaker/(.*)$ /icebreaker/$1 [R=301,L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
@@ -17,5 +20,5 @@
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ icebreaker/index.php [L]
+    RewriteRule ^ index.php [L]
 </IfModule>
