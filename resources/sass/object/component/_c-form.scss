@@ -24,3 +24,12 @@
         background-color: f.$accentColor;
     }
 }
+
+.c-login-message {
+    font-size: 14px;
+}
+
+.c-login-message__link {
+    color: f.$accentColor;
+    font-weight: bold;
+}

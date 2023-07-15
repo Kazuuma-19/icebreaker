@@ -33,7 +33,7 @@ Route::resource('topics', TopicController::class);
 
 // ログイン、ログアウト
 Route::get('login', [AuthController::class, 'index'])
-  ->name('login');
+  ->name('login.index');
 Route::post('login', [AuthController::class, 'store'])
   ->name('login.store');
 Route::delete('logout', [AuthController::class, 'destroy'])

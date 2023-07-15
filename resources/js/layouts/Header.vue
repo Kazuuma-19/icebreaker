@@ -30,7 +30,7 @@
             </div>
 
             <div v-else class="d-flex align-items-center gap-3 text-center">
-                <Link :href="route('login')" class="c-btn l-header-btn">
+                <Link :href="route('login.index')" class="c-btn l-header-btn">
                     <i class="bi bi-box-arrow-in-right pe-1"></i>
                     ログイン
                 </Link>

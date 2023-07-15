@@ -10,7 +10,7 @@
                     type="name"
                     class="form-control c-form-input mb-1"
                     id="name"
-                    placeholder="Enter your name"
+                    placeholder="Full Name"
                 />
                 <div v-if="form.errors.name" class="text-danger">
                     {{ form.errors.name }}
@@ -27,7 +27,7 @@
                     class="form-control c-form-input mb-1"
                     id="email"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Email Address"
                 />
                 <div v-if="form.errors.email" class="text-danger">
                     {{ form.errors.email }}
@@ -59,8 +59,18 @@
                     type="password"
                     class="form-control c-form-input mb-1"
                     id="password_confirmation"
-                    placeholder="Password"
+                    placeholder="Password Confirmation"
                 />
+            </div>
+
+            <div class="c-login-message mb-4 text-center">
+                <Link
+                    :href="route('login.index')"
+                    class="c-login-message__link"
+                >
+                    ログイン
+                </Link>
+                はこちらから
             </div>
 
             <div class="text-center">
@@ -73,7 +83,7 @@
 </template>
 
 <script setup>
-import { useForm } from "@inertiajs/vue3";
+import { Link, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
     name: null,

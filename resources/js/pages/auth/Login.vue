@@ -13,7 +13,7 @@
                     class="form-control c-form-input mb-1"
                     id="email"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Email Address"
                 />
                 <div v-if="form.errors.email" class="text-danger">
                     {{ form.errors.email }}
@@ -36,11 +36,11 @@
                 </div>
             </div>
 
-            <div class="l-login-message mb-5 text-center">
+            <div class="c-login-message mb-5 text-center">
                 アカウントをもっていない場合は
                 <Link
                     :href="route('register.index')"
-                    class="l-login-message__link"
+                    class="c-login-message__link"
                 >
                     会員登録
                 </Link>
