@@ -1,5 +1,8 @@
 <template>
-    <div v-if="flashMessage" class="c-flash text-center mt-5 p-2">
+    <div
+        v-if="flashMessage"
+        class="c-flash text-center position-absolute w-100 mt-5 p-2"
+    >
         {{ flashMessage }}
     </div>
 </template>

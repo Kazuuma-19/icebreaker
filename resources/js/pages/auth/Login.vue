@@ -1,6 +1,6 @@
 <template>
     <div class="p-form-wrapper p-5">
-        <div class="text-center mb-4">
+        <div class="text-center mb-5">
             <img
                 src="/public/img/logo.png"
                 alt="ロゴ"
