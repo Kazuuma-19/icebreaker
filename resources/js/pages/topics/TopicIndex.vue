@@ -165,6 +165,7 @@ const isEdit = ref();
 // お題の追加
 const create = () => {
     form.post("topics");
+    form.reset();
 };
 // お題の編集状態を切り替え
 const editTopic = (topic) => {
