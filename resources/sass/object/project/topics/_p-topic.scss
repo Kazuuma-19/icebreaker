@@ -11,6 +11,8 @@ tr {
 }
 th,
 td {
+    vertical-align: middle;
+
     padding: 16px !important;
 }
 
@@ -73,6 +75,7 @@ td {
     }
 }
 
+// 編集
 // form
 .p-topic-input {
     border: none;
