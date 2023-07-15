@@ -1,6 +1,13 @@
 <template>
     <div class="p-form-wrapper p-5">
-        <h2 class="c-form-title text-center mb-4">ログイン</h2>
+        <div class="text-center mb-4">
+            <img
+                src="/public/img/logo.png"
+                alt="ロゴ"
+                class="l-logo"
+                height="100"
+            />
+        </div>
 
         <form @submit.prevent="login">
             <div class="form-group mb-4">

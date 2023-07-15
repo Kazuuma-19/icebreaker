@@ -1,6 +1,13 @@
 <template>
     <div class="p-form-wrapper p-5">
-        <h2 class="c-form-title text-center mb-4">会員登録</h2>
+        <div class="text-center mb-4">
+            <img
+                src="/public/img/logo.png"
+                alt="ロゴ"
+                class="l-logo"
+                height="100"
+            />
+        </div>
 
         <form @submit.prevent="register">
             <div class="form-group mb-4">
@@ -63,7 +70,7 @@
                 />
             </div>
 
-            <div class="c-login-message mb-4 text-center">
+            <div class="c-login-message mb-5 text-center">
                 <Link
                     :href="route('login.index')"
                     class="c-login-message__link"

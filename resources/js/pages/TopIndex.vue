@@ -29,7 +29,7 @@
             </div>
 
             <!-- userが存在していれば処理 -->
-            <div v-if="user" class="text-center mt-4">
+            <div v-if="user" class="text-center mt-5">
                 <button
                     class="p-top-change-btn me-5"
                     :class="{ active: isUser }"

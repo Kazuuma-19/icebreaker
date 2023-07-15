@@ -96,16 +96,15 @@
 
 // 表示するお題を切り替え
 .p-top-change-btn {
-    font-size: 20px;
     font-weight: bold;
     color: f.$mainColor;
     background: f.$baseWhiteColor;
-    border-radius: 50%;
     border: none;
+    border-radius: 10px;
 
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
+    width: 140px;
+
+    padding: 20px;
 
     display: inline-block;
 }

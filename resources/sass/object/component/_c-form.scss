@@ -5,9 +5,6 @@ form要素
 *****************************************:*/
 @use "../../foundation/" as f;
 
-.c-form-title {
-    font-size: 36px;
-}
 .c-form-label {
     font-size: 14px;
 }
@@ -35,6 +32,13 @@ form要素
 }
 
 .c-login-message__link {
-    color: f.$accentColor;
     font-weight: bold;
+    color: f.$accentColor;
+    border-bottom: 1px solid f.$accentColor;
+
+    padding-bottom: 2px;
+
+    &:hover {
+        color: f.$accentColor;
+    }
 }
