@@ -1,14 +1,14 @@
 <template>
     <MainLayout>
-        <div class="l-top-wrapper">
+        <div class="p-top-wrapper">
             <div class="text-center">
-                <h2 class="l-top-title mb-5">TOPIC</h2>
+                <h2 class="p-top-title mb-5">TOPIC</h2>
             </div>
 
-            <div class="l-top-box p-4 text-center">
-                <div class="l-top-content">
+            <div class="p-top-box p-4 text-center">
+                <div class="p-top-content">
                     <div>
-                        <div class="l-top-content__ttl p-2 mb-4">
+                        <div class="p-top-content__ttl p-2 mb-4">
                             {{ topic.topic }}
                         </div>
                     </div>
@@ -16,13 +16,13 @@
                     <!-- 自分のお題のみ表示 -->
                     <a
                         v-if="isUser"
-                        class="l-top-content__btn"
+                        class="p-top-content__btn"
                         @click="display"
                     >
                         Display
                     </a>
                     <!-- 全ユーザーのお題を表示 -->
-                    <a v-else class="l-top-content__btn" @click="displayAll">
+                    <a v-else class="p-top-content__btn" @click="displayAll">
                         Display All
                     </a>
                 </div>
@@ -31,14 +31,14 @@
             <!-- userが存在していれば処理 -->
             <div v-if="user" class="text-center mt-4">
                 <button
-                    class="l-top-change-btn me-5"
+                    class="p-top-change-btn me-5"
                     :class="{ active: isUser }"
                     @click="userTopics"
                 >
                     自分のみ
                 </button>
                 <button
-                    class="l-top-change-btn"
+                    class="p-top-change-btn"
                     :class="{ active: isAllUser }"
                     @click="allTopics"
                 >
