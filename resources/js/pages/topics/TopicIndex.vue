@@ -44,15 +44,16 @@
                         <td class="d-flex justify-content-center gap-2">
                             <button
                                 type="submit"
-                                class="btn p-topic-btn p-topic-btn--edit c-topic-btn"
+                                class="btn p-topic-btn p-topic-btn--edit"
                                 @click="update(topic)"
                             >
+                                <i class="bi bi-check-square pe-1"></i>
                                 完了
                             </button>
 
                             <button
                                 type="submit"
-                                class="btn btn-secondary p-topic-btn c-topic-btn"
+                                class="btn btn-secondary p-topic-btn"
                                 @click="editTopic"
                             >
                                 キャンセル
@@ -78,16 +79,18 @@
                         <td class="d-flex justify-content-center gap-2">
                             <button
                                 type="submit"
-                                class="btn c-btn p-topic-btn p-topic-btn--edit c-topic-btn"
+                                class="btn c-btn p-topic-btn p-topic-btn--edit"
                                 @click="editTopic(topic)"
                             >
+                                <i class="bi bi-pen pe-1"></i>
                                 編集
                             </button>
                             <button
                                 type="submit"
-                                class="btn c-btn p-topic-btn p-topic-btn--delete c-topic-btn"
+                                class="btn c-btn p-topic-btn p-topic-btn--delete"
                                 @click="remove(topic.id)"
                             >
+                                <i class="bi bi-trash pe-1"></i>
                                 削除
                             </button>
                         </td>
@@ -126,6 +129,7 @@
                             class="btn c-btn p-topic-btn p-topic-btn--register c-topic-btn"
                             @click="create"
                         >
+                            <i class="bi bi-plus-circle-dotted pe-1"></i>
                             追加
                         </button>
                     </td>
@@ -135,6 +139,7 @@
 
         <div class="text-center">
             <Link :href="route('top')" class="btn c-btn p-topic-top-btn">
+                <i class="bi bi-house pe-1"></i>
                 トップへ
             </Link>
         </div>

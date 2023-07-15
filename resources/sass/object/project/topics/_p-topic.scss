@@ -1,3 +1,9 @@
+/****************************************:
+
+お題の管理ページ
+
+*****************************************:*/
+
 @use "../../../foundation/" as f;
 
 tr {
@@ -16,11 +22,12 @@ td {
     background-color: f.$mainColor;
 }
 
+// お題の追加、編集、削除、完了、キャンセル
 .p-topic-btn {
     color: f.$baseWhiteColor;
     border-radius: 8px;
 
-    padding: 8px 24px;
+    padding: 8px 20px;
 
     // 追加
     &--register {

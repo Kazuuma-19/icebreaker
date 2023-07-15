@@ -6,7 +6,9 @@ base
 @use "../foundation" as f;
 
 // import bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
+// import bootstrap-icons
+@import "~bootstrap-icons/font/bootstrap-icons";
 
 body {
     font-family: f.$baseFontFamily;
