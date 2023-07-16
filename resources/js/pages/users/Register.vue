@@ -1,12 +1,14 @@
 <template>
     <div class="p-form-wrapper p-5">
         <div class="text-center mb-5">
-            <img
-                src="/public/img/logo.png"
-                alt="ロゴ"
-                class="l-logo"
-                height="100"
-            />
+            <Link :href="route('top')">
+                <img
+                    src="/public/img/logo.png"
+                    alt="ロゴ"
+                    class="l-logo"
+                    height="100"
+                />
+            </Link>
         </div>
 
         <form @submit.prevent="register">
