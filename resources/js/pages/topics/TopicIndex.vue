@@ -13,6 +13,44 @@
             </thead>
 
             <tbody>
+                <!-- 登録 -->
+                <tr>
+                    <td>
+                        <input
+                            v-model="form.topic"
+                            type="text"
+                            class="p-topic-input px-1 py-2"
+                        />
+                    </td>
+                    <td>
+                        <input
+                            v-model="form.category"
+                            type="text"
+                            class="p-topic-input px-1 py-2"
+                        />
+                    </td>
+                    <td>
+                        <div class="form-switch text-center">
+                            <input
+                                v-model="form.public"
+                                class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                            />
+                        </div>
+                    </td>
+                    <td>
+                        <button
+                            type="submit"
+                            class="btn c-btn p-topic-btn p-topic-btn--register c-topic-btn"
+                            @click="create"
+                        >
+                            <i class="bi bi-plus-circle-dotted pe-1"></i>
+                            追加
+                        </button>
+                    </td>
+                </tr>
+
                 <tr v-for="topic in topics" :key="topic.id">
                     <!-- 編集 -->
                     <template v-if="isEdit == topic">
@@ -95,44 +133,6 @@
                             </button>
                         </td>
                     </template>
-                </tr>
-
-                <!-- 登録 -->
-                <tr>
-                    <td>
-                        <input
-                            v-model="form.topic"
-                            type="text"
-                            class="p-topic-input px-1 py-2"
-                        />
-                    </td>
-                    <td>
-                        <input
-                            v-model="form.category"
-                            type="text"
-                            class="p-topic-input px-1 py-2"
-                        />
-                    </td>
-                    <td>
-                        <div class="form-switch text-center">
-                            <input
-                                v-model="form.public"
-                                class="form-check-input"
-                                type="checkbox"
-                                role="switch"
-                            />
-                        </div>
-                    </td>
-                    <td>
-                        <button
-                            type="submit"
-                            class="btn c-btn p-topic-btn p-topic-btn--register c-topic-btn"
-                            @click="create"
-                        >
-                            <i class="bi bi-plus-circle-dotted pe-1"></i>
-                            追加
-                        </button>
-                    </td>
                 </tr>
             </tbody>
         </table>
