@@ -2,6 +2,8 @@
 
 ![c7c007c4-5b8d-44e2-9436-3794c98641cf](https://github.com/Kazuuma-19/icebreaker/assets/96773919/88db2e69-d24e-4f1f-a6d7-eeef84df4fe1)
 
+[ICEBRAKER リンク](https://icebreaker.sakura.ne.jp/icebreaker/)
+
 ## ▽ 制作背景
 
 自分が所属しているゼミで毎週アイスブレイクを行う。その際に毎週新たなお題を考える必要があった。しかしお題を毎週考えるのはめんどくさい。  
